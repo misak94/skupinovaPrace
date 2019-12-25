@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ZboziControler">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+              <Menu mnemonicParsing="false" text="Sklad">
+                  <items>
+                      <MenuItem mnemonicParsing="false" text="Přidat zboží" onAction="#pridatZboziScena"/>
+                      <MenuItem mnemonicParsing="false" text="Odebrat zboží" onAction="#odebratZboziScena"/>
+                      <MenuItem mnemonicParsing="false" text="Seznam zboží" onAction="#seznamZboziScena" />
+                  </items>
+              </Menu>
+              <Menu mnemonicParsing="false" text="Faktury">
+                  <items>
+                      <MenuItem mnemonicParsing="false" text="Přidat fakturu" onAction="#pridatFakturScena" />
+                      <MenuItem mnemonicParsing="false" text="Odebrat fakturu" onAction="#odebratFakturuScena" />
+                      <MenuItem mnemonicParsing="false" text="Seznam faktur" onAction="#seznamFakturScena" />
+                  </items>
+              </Menu>
+              <Menu mnemonicParsing="false" text="Obchodní partneři">
+                  <items>
+                      <MenuItem mnemonicParsing="false" text="Přidat partnera" onAction="#pridatPartneraScena" />
+                      <MenuItem mnemonicParsing="false" text="Odebrat partnera" onAction="#odebratPartneraScena" />
+                      <MenuItem mnemonicParsing="false" text="Seznam Partnerů" onAction="#seznamPartneruScena" />
+                  </items>
+              </Menu>
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About App" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="222.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Text layoutX="73.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Název" />
+            <TextField layoutX="112.0" layoutY="10.0" fx:id="nazevZbozi" />
+            <Text layoutX="59.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jednotka" />
+            <Text layoutX="14.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cena za jednotku" />
+            <TextField layoutX="112.0" layoutY="39.0" fx:id="jednotkaZbozi"/>
+            <TextField layoutX="112.0" layoutY="69.0" fx:id="cenaZaJednotkuZbozi"/>
+            <TextField layoutX="112.0" layoutY="103.0" fx:id="mnozstviZbozi"/>
+            <Text layoutX="59.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Množství" />
+            <Button layoutX="540.0" layoutY="336.0" mnemonicParsing="false" text="Vložit" onAction="#vlozitZbozi" />
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

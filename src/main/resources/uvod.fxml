@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.UvodControler">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+                  <Menu mnemonicParsing="false" text="Sklad">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Přidat zboží" onAction="#pridatZboziScena"/>
+                        <MenuItem mnemonicParsing="false" text="Odebrat zboží" onAction="#odebratZboziScena"/>
+                        <MenuItem mnemonicParsing="false" text="Seznam zboží" onAction="#seznamZboziScena" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Faktury">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Přidat fakturu" onAction="#pridatFakturScena" />
+                        <MenuItem mnemonicParsing="false" text="Odebrat fakturu" onAction="#odebratFakturuScena" />
+                        <MenuItem mnemonicParsing="false" text="Seznam faktur" onAction="#seznamFakturScena" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Obchodní partneři">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Přidat partnera" onAction="#pridatPartneraScena" />
+                        <MenuItem mnemonicParsing="false" text="Odebrat partnera" onAction="#odebratPartneraScena" />
+                        <MenuItem mnemonicParsing="false" text="Seznam Partnerů" onAction="#seznamPartneruScena" />
+                    </items>
+                  </Menu>
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About App" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+  </children>
+</VBox>

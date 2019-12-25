@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.ZboziControler">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+                  <Menu mnemonicParsing="false" text="Sklad">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#pridatZboziScena" text="Přidat zboží" />
+                        <MenuItem mnemonicParsing="false" onAction="#odebratZboziScena" text="Odebrat zboží" />
+                        <MenuItem mnemonicParsing="false" onAction="#seznamZboziScena" text="Seznam zboží" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Faktury">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Přidat fakturu" />
+                        <MenuItem mnemonicParsing="false" text="Odebrat fakturu" />
+                        <MenuItem mnemonicParsing="false" text="Seznam faktur" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Obchodní partneři">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Přidat partnera" />
+                        <MenuItem mnemonicParsing="false" text="Odebrat partnera" />
+                        <MenuItem mnemonicParsing="false" text="Seznam Partnerů" />
+                    </items>
+                  </Menu>
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About App" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+      <ListView prefHeight="393.0" prefWidth="600.0" />
+  </children>
+</VBox>

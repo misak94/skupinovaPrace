@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.FakturyControler">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+              <Menu mnemonicParsing="false" text="Sklad">
+                  <items>
+                      <MenuItem mnemonicParsing="false" onAction="#pridatZboziScena" text="Přidat zboží" />
+                      <MenuItem mnemonicParsing="false" onAction="#odebratZboziScena" text="Odebrat zboží" />
+                      <MenuItem mnemonicParsing="false" onAction="#seznamZboziScena" text="Seznam zboží" />
+                  </items>
+              </Menu>
+              <Menu mnemonicParsing="false" text="Faktury">
+                  <items>
+                      <MenuItem mnemonicParsing="false" onAction="#pridatFakturScena" text="Přidat fakturu" />
+                      <MenuItem mnemonicParsing="false" onAction="#odebratFakturuScena" text="Odebrat fakturu" />
+                      <MenuItem mnemonicParsing="false" onAction="#seznamFakturScena" text="Seznam faktur" />
+                  </items>
+              </Menu>
+              <Menu mnemonicParsing="false" text="Obchodní partneři">
+                  <items>
+                      <MenuItem mnemonicParsing="false" onAction="#pridatPartneraScena" text="Přidat partnera" />
+                      <MenuItem mnemonicParsing="false" onAction="#odebratPartneraScena" text="Odebrat partnera" />
+                      <MenuItem mnemonicParsing="false" onAction="#seznamPartneruScena" text="Seznam Partnerů" />
+                  </items>
+              </Menu>
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About App" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="222.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Text layoutX="50.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID faktury" />
+            <TextField fx:id="idFaktury" layoutX="112.0" layoutY="10.0" />
+            <Text layoutX="12.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Datum splatnosti" />
+            <Text layoutX="28.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Způsob platby" />
+            <TextField fx:id="datumSplatnosti" layoutX="112.0" layoutY="39.0" />
+            <TextField fx:id="zpusobPlatby" layoutX="112.0" layoutY="69.0" />
+            <TextField fx:id="datumVystaveni" layoutX="112.0" layoutY="103.0" />
+            <Text layoutX="21.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Datum vystavení" />
+            <Button layoutX="540.0" layoutY="336.0" mnemonicParsing="false" onAction="#vlozitFakturu" text="Vložit" />
+            <Text layoutX="76.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zboží" />
+            <TextField fx:id="zbozi" layoutX="112.0" layoutY="133.0" />
+            <Text layoutX="57.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Množství" />
+            <TextField fx:id="mnozstvi" layoutX="112.0" layoutY="166.0" />
+            <Text layoutX="315.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jednotka množství" />
+            <TextField fx:id="jednotkaMnozstvi" layoutX="414.0" layoutY="10.0" />
+            <Text layoutX="318.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cena za jednotku" />
+            <TextField fx:id="cenaZaJednotku" layoutX="414.0" layoutY="39.0" />
+            <Text layoutX="264.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jméno obchodního partnera" />
+            <Text layoutX="383.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IČO" />
+            <Text layoutX="263.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adresa obchodního partnera" />
+            <Text layoutX="373.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefon" />
+            <TextField fx:id="jmenoObchodnihoPartnera" layoutX="414.0" layoutY="69.0" />
+            <TextField fx:id="ico" layoutX="414.0" layoutY="103.0" />
+            <TextField fx:id="adresa" layoutX="414.0" layoutY="133.0" />
+            <TextField fx:id="telefon" layoutX="414.0" layoutY="166.0" />
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
